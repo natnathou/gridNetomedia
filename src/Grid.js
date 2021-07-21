@@ -7,6 +7,7 @@ const Grid = ({ config, data }) => {
     () => () => data.map((row) => <tr key={row.imdbID}>{rowRendering(row)}</tr>),
     [data]
   );
+
   const rowRendering = (rowData) =>
     config.map(({ field, title, component }) => (
       <td key={field}>
