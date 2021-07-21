@@ -5,7 +5,7 @@ const Grid = ({ config, data }) => {
 
   const bodyRendering = useMemo(
     () => () => data.map((row) => <tr key={row.imdbID}>{rowRendering(row)}</tr>),
-    [data]
+    [data, config]
   );
 
   const rowRendering = (rowData) =>
