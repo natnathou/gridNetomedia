@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 
 const Grid = ({ config, data }) => {
-  console.log(config);
   const headerRendering = () => config.map(({ title }) => <th key={title}>{title}</th>);
 
   const bodyRendering = useMemo(
